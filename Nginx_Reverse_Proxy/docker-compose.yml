@@ -1,0 +1,7 @@
+services:
+  reverse-proxy:
+    image: docker.io/nginx:1.29.3-alpine
+    restart: always
+    network_mode: host # same as host to access other ports by other compose
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro

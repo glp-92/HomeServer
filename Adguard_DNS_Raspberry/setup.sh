@@ -11,4 +11,3 @@ sudo ufw allow from local-ip-range/24 to any port 3000 proto tcp # first config
 sudo ufw enable
 cd
 curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
-

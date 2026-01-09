@@ -7,7 +7,7 @@ It is recommended to use [podman](https://podman.io/) with a non-sudo user to ru
 ## Run Service
 
 ```bash
-podman compose up -d
+docker compose up -d
 ```
 
 As compose will be executed by a non sudo user, when `ssh` logout, compose will stop so enable lingering for user will keep the session

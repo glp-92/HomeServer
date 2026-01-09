@@ -49,7 +49,7 @@ ClientAliveInterval 300
 ClientAliveCountMax 0
 PermitUserEnvironment no ## CAUTION: only "yes" when loading .env variables to create de init.sql file. Better fill fields with own db params
 ```
-  - `sudo systemctl restart sshd`
+  - `sudo systemctl restart ssh`
   - If not working and user is prompted for password [check this](https://unix.stackexchange.com/questions/727492/passwordauthentication-no-but-i-can-still-login-by-password)
 
 5. Fail2Ban utility => intrusion prevention system that monitors log files and ban suspicious IP addresses by using `iptables`. 
@@ -87,27 +87,18 @@ sudo ufw enable
 sudo ufw status verbose
 ```
 
-7. Docker compose & podman
+To delete existing rule
+
 ```bash
-# Add Docker's official GPG key:
-sudo apt update
-sudo apt install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+sudo ufw status numbered
+sudo ufw delete 5 # example
+```
 
-# Add the repository to Apt sources:
-sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
-Types: deb
-URIs: https://download.docker.com/linux/ubuntu
-Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
-Components: stable
-Signed-By: /etc/apt/keyrings/docker.asc
-EOF
+7. Docker & Docker Compose [install](https://docs.docker.com/engine/install/)
 
-sudo apt update
-sudo apt install podman
-sudo apt install docker-compose-plugin
+```bash
+sudo systemctl enable docker
+sudo usermod -aG docker user # not need sudo docker ps...
 ```
 
 8. Disable auto suspend for server

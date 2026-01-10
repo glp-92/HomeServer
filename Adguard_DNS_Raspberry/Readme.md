@@ -12,6 +12,8 @@ In this example, a DNS record is added to Adguard to access Inmich server expose
 
 Go to main Adguard Dashboard -> `filters`-> `DNS rewrites` -> `Add DNS rewrite` -> Domain name `homeserver.local.com` IP `192.168.1.253`
 
+To write immich subdomain -> `filters`-> `DNS rewrites` -> `Add DNS rewrite` -> Domain name `images.homeserver.local.com` IP `192.168.1.253`
+
 ## Utilities
 
 ### Adguard status

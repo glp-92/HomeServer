@@ -135,3 +135,14 @@ sudo mount -a
 systemctl daemon-reload
 df -h # check mounted, filesystem and %usage
 ```
+
+Check raid status with `cat /proc/mdstat` or `watch -n 60 cat /proc/mdstat` to update every minute
+
+```bash
+Personalities : [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 sdc1[1] sdb1[0]
+      976628736 blocks super 1.2 [2/2] [UU]
+      [>....................]  resync =  3.2% (32048832/976628736) finish=300.0min speed=52464K/sec # 300 min left, 50mb/s sync
+      bitmap: 8/8 pages [32KB], 65536KB chunk
+
+```

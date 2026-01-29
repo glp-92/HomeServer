@@ -116,6 +116,11 @@ sudo groupadd -r -g 1001 media
 sudo useradd -u 1001 -g 1001 media
 ```
 
+For adding it with no home
+```bash
+sudo useradd immich
+```
+
 10. (Optional) Create a home non-accesible by other users on other groups
 ```bash
 sudo mkdir /home/media

@@ -35,9 +35,13 @@ sudo netplan apply
 
 In home network, an Adguard server was installed on a raspberry pi in order to resolve some local dns requests as `http://homeserver.local.com`. Adguard gives the user some control over websites visited by users and some bloquing filters in order to reduce noise on home network. Local IP of Adguard server was setted as primary DNS on ISP router configuration. [Check docs to install Adguard here](./Raspberry_Adguard/Readme.md)
 
-### Nginx
+### PiVPN
 
-Entrypoint to home server. Maps paths to applications. As it is supposed that no external users will have access to the server, some security measurements were not taken into account. However it is still recommended a minimal hardening (ssl with https only, rate limiting, payload limits...)
+[Check docs to install local VPN service on Raspy here](./PiVPN_Server/Readme.md)
+
+### Nginx Stream Server
+
+Use Nginx as a pipeline to stream one video source to multiple stream servers as Twitch, Youtube at the same time
 
 ### Immich Image Server
 

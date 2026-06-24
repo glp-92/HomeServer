@@ -18,7 +18,7 @@ With this configuration, `eth1` works as input for `WAN`, `eth2` for a Microtik 
 
 Minimal firewall setup is provided [here](./firewall-config.rsc) to isolate networks from themselves so they cannot access devices on another Lan.
 
-Note that `192.168.1.253` is now reachable from WAN network in order to use `http` and `ssh` to access Immich server and more. A route must be configured on ISP Router in order to make it reachable
+Note that `192.168.1.253` is now reachable from WAN network in order to use `http` and `ssh` to access services inside and more. A route must be configured on ISP Router in order to make it reachable
 
 - Add routing rule: `destination 192.168.1.0 / mask 255.255.255.0 / gateway <Mikrotik router ip on WAN>`
 

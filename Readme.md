@@ -2,7 +2,7 @@
 
 Guides on how to setup multiple services on private
 
-First of all, is recommended a minimal system hardening, [check this guide](./ServerHardening.md)
+First of all, is recommended a minimal system hardening, [check this guide](./Server_Hardening/Readme.md)
 
 ## Setup
 
@@ -33,7 +33,7 @@ sudo netplan apply
 
 ### Adguard
 
-In home network, an Adguard server was installed on a raspberry pi in order to resolve some local dns requests as `http://homeserver.local.com`. Adguard gives the user some control over websites visited by users and some bloquing filters in order to reduce noise on home network. Local IP of Adguard server was setted as primary DNS on ISP router configuration. [Check docs to install Adguard here](./Adguard_DNS_Raspberry/Readme.md)
+In home network, an Adguard server was installed on a raspberry pi in order to resolve some local dns requests as `http://homeserver.local.com`. Adguard gives the user some control over websites visited by users and some bloquing filters in order to reduce noise on home network. Local IP of Adguard server was setted as primary DNS on ISP router configuration. [Check docs to install Adguard here](./Raspberry_Adguard/Readme.md)
 
 ### Nginx
 

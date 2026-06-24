@@ -4,7 +4,7 @@ In order to set some DNS records an basic ad bloquer, Adguard can be installed o
 
 ## Setup
 
-Run comnands on the [script provided](./setup.sh)
+Run comnands on the [script provided](./setup.sh). Make sure that an static IP address is assigned to Raspberry
 
 ## Add DNS for home server
 

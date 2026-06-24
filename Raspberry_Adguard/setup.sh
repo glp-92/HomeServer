@@ -3,10 +3,10 @@ sudo apt update -y && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo ap
 sudo apt install ufw -y
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
-sudo ufw allow from local-ip-range/24 to any port 22 proto tcp
-sudo ufw allow from local-ip-range/24 to any port 53 proto tcp
-sudo ufw allow from local-ip-range/24 to any port 53 proto udp
-sudo ufw allow from local-ip-range/24 to any port 80 proto tcp
+sudo ufw allow from local-ip-range/24 to any port 22 proto tcp # ssh admin
+sudo ufw allow from local-ip-range/24 to any port 53 proto tcp # dns
+sudo ufw allow from local-ip-range/24 to any port 53 proto udp # dns
+sudo ufw allow from local-ip-range/24 to any port 80 proto tcp 
 sudo ufw allow from local-ip-range/24 to any port 3000 proto tcp # first config
 sudo ufw enable
 cd
